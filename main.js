@@ -23,26 +23,24 @@ alert('Eres la persona numero '+ i + ' en ingresar a la pagina')
 }
 
 class producto {
-    constructor(unidad, nombre, precio) {
+    constructor(unidad, nombre, precio, cantidad) {
         this.unidad = unidad;
         this.nombre = nombre;
         this.precio = precio;
+        this.cantidad = cantidad;
     }
+    costo=() => this.precio * this.cantidad;
 }
-const producto1 = new producto("Kilo de ", "Caucho granulado ", "$450");
+const producto1 = new producto("Kilo de ", "Caucho granulado ", "$450", 10);
 return producto1;
 
-const producto2 = new producto("Kilo de ", "Caucho pulverizado ", "$650");
+const producto2 = new producto("Kilo de ", "Caucho pulverizado ", "$650", 5);
 return producto2;
 
 let precioGranulado = 450
 let precioPulverizado = 650 
 
-function sumaProductos(a,b){
-    return a+b 
-}
-
-const SUMA = [${precioGranulado}, ${precioPulverizado}].reduce((a,b)=>a+b) 
+const SUMA = [{precioGranulado}, {precioPulverizado}].reduce((a,b)=>a+b) 
 alert('El costo de los productos seleccionados es '+total)
 console.log(SUMA)
 
@@ -66,8 +64,7 @@ let opciones
 }    
 }
 
-
-const precioMasIva = IVA.map((a+b*iva) =>(a+b)*.16)
+const precioMasIva = IVA.map((a+b*iva) => (a+b)*.16);
 console.log(precioMasIva)
-
+//pendiente cambiar el calculo del iva 
 
