@@ -1,7 +1,5 @@
-//trasladar el proyecto a concepto de objetos,
 //1. incorporar al menos un array al proyecto (que agrupe elementos similares)
 //2. utilizar algunos metodos o propiedades
-//ejemplos: array de productos
 
 
 function usuarioNuevo(){
@@ -43,13 +41,10 @@ let precioPulverizado = 650
 function sumaProductos(a,b){
     return a+b 
 }
-let resultado= sumaProductos(precioGranulado, precioPulverizado )
-console.log(resultado)
 
-function mostrarTotal (total){
+const SUMA = [${precioGranulado}, ${precioPulverizado}].reduce((a,b)=>a+b) 
 alert('El costo de los productos seleccionados es '+total)
-}
-console.log(mostrarTotal('$1,100'))
+console.log(SUMA)
 
 let opciones 
     do{
@@ -68,12 +63,11 @@ let opciones
             default: 
                 alert('Opción inválida')
 }
-// }    
-// }
+}    
+}
 
 
 const precioMasIva = IVA.map((a+b*iva) =>(a+b)*.16)
 console.log(precioMasIva)
 
-const SUMA = [450, 650].reduce((a,b)=>a+b) 
-console.log(SUMA)
+
