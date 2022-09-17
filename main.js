@@ -1,7 +1,3 @@
-//1. incorporar al menos un array al proyecto (que agrupe elementos similares)
-//2. utilizar algunos metodos o propiedades
-
-
 function usuarioNuevo(){
     let nombreCompleto = prompt('Bienvenido, ingresa tu nombre y apellido');
     let edad = parseInt(prompt('Que edad tienes?'));
