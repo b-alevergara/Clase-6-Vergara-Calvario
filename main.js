@@ -1,5 +1,3 @@
-//como capturar datos desde un return?
-
 class Persona {
     constructor(nombre, edad, empresa, codigoPostal) {
         this.nombre = nombre;
@@ -19,10 +17,6 @@ const nuevoUsuario = new Persona(
     codigoPostal: parseInt(prompt("Cual es tu codigo postal?"))
 });
 nuevaPersona.informacion();
-
-
-
-
 
 if(nuevaPersona.edad >18){ 
     alert('Eres mayor de edad')
@@ -64,4 +58,3 @@ function calculoTotal(){
     //aqui mas bien iria un alert que le ense;e al usuario el total
     alert( `El total de su compra es de $ ${calculoIva(Precio)}`)
 }       console.log(calculoTotal())
-//aqui ya me arrojaria el alert aunque no le haya puesto ningun array a la funcion?
