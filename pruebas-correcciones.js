@@ -47,7 +47,7 @@ let opciones
                 alert('Opción inválida')
 }
 }    
-let precio = 450;
+let precio = [450];
 // function sumarProductos(precios){
 //     return precios.reduce((a,b) => a+b)
 // }
