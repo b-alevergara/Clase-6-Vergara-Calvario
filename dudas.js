@@ -1,6 +1,5 @@
 //como capturar datos desde un return?
 //construir un objeto con los datos obtenidos
-
 class Persona {
     constructor(nombre, edad, empresa, codigoPostal) {
         this.nombre = nombre;
@@ -12,14 +11,19 @@ class Persona {
         console.log("El usuario se llama "+ this.nombre + "y pertenece a la empresa " + this.empresa)
     }
 }
-const nuevaPersona = []{
-nuevaPersona.push(new Persona( //aqui no estoy segura si funcionan los prompt y si funcionan los estoy guardando correctamente en el objeto?
-nombre: prompt("Bienvenido, ingresa tu nombre"), 
-edad: parseInt(prompt('Que edad tienes?')), 
-empresa: prompt("A que empresa perteneces?"), 
-codigoPostal: parseInt(prompt("Cual es tu codigo postal?"))
-))}
+const nuevaPersona = new Persona(  //aqui no estoy segura si funcionan los prompt y si funcionan los estoy guardando correctamente en el objeto?
+    {nombre: prompt("Bienvenido, ingresa tu nombre"), 
+    edad: parseInt(prompt('Que edad tienes?')), 
+    empresa: prompt("A que empresa perteneces?"), 
+    codigoPostal: parseInt(prompt("Cual es tu codigo postal?"))
+});
 nuevaPersona.informacion();
+
+//y por fuera guardarlos en un array de usuarios
+//puedo acceder a propiedades de un objeto? 
+//no son como las funciones, que no puedo acceder a ellas?
+
+
 
 if(nuevaPersona.edad >18){ 
     alert('Eres mayor de edad')
@@ -47,18 +51,18 @@ let opciones
 }    
 //aqui no se como conectar la opcion que el usuario ingresa, para pasar a hacerle el calculo del iva del producto seleccionado
 
+
 //array de precios 
 const Precio = [450]
-//map debe recibir un array con precios
-function calculoIva(){
+//map debe recibir un array con precios para que logre crear un nuevo array
+//de los precios mas el iva
+function calculoIva(arr){
     return arr.map(Precio*0.16)
-}    console.log(calculoIva(Precio))
-//en teoria calculoIva crea un nuevo array y mi calculoTotal ya no seria necesario, porque este array
-//ya me esta dando el resultado de la multiplicacion
+}    console.log(calculoIva)
 
-function calculoTotal(){
-    // return arr.reduce((a,b) => a+b)
-    //aqui mas bien iria un alert que le ense;e al usuario el total
-    alert( `El total de su compra es de $ ${calculoIva(Precio)}`)
-}       console.log(calculoTotal())
-//aqui ya me arrojaria el alert aunque no le haya puesto ningun array a la funcion?
+function calculoTotal(arr){
+    return arr.reduce((a,b) => a+b)
+}       console.log(calculoTotal)
+//al llamar las funciones que usan arrays no les estoy pasando un array(porque en parametro puse array)
+calculoTotal( 450, calculoIva)
+alert(`El total de su compra es de $ ${calculoTotal}`)
