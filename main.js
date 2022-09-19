@@ -1,5 +1,4 @@
 //como capturar datos desde un return?
-//construir un objeto con los datos obtenidos
 
 class Persona {
     constructor(nombre, edad, empresa, codigoPostal) {
@@ -12,6 +11,8 @@ class Persona {
         console.log("El usuario se llama "+ this.nombre + "y pertenece a la empresa " + this.empresa)
     }
 }
+//si estoy construyendo correctamente el objeto con los datos obtenidos?
+
 const nuevaPersona = []{
 nuevaPersona.push(new Persona( //aqui no estoy segura si funcionan los prompt y si funcionan los estoy guardando correctamente en el objeto?
 nombre: prompt("Bienvenido, ingresa tu nombre"), 
