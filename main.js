@@ -11,16 +11,18 @@ class Persona {
         console.log("El usuario se llama "+ this.nombre + "y pertenece a la empresa " + this.empresa)
     }
 }
-//si estoy construyendo correctamente el objeto con los datos obtenidos?
-
-const nuevaPersona = []{
-nuevaPersona.push(new Persona( //aqui no estoy segura si funcionan los prompt y si funcionan los estoy guardando correctamente en el objeto?
-nombre: prompt("Bienvenido, ingresa tu nombre"), 
-edad: parseInt(prompt('Que edad tienes?')), 
-empresa: prompt("A que empresa perteneces?"), 
-codigoPostal: parseInt(prompt("Cual es tu codigo postal?"))
-))}
+const nuevaPersona = []
+const nuevoUsuario = new Persona( 
+    {nombre: prompt("Bienvenido, ingresa tu nombre"), 
+    edad: parseInt(prompt('Que edad tienes?')), 
+    empresa: prompt("A que empresa perteneces?"), 
+    codigoPostal: parseInt(prompt("Cual es tu codigo postal?"))
+});
 nuevaPersona.informacion();
+
+
+
+
 
 if(nuevaPersona.edad >18){ 
     alert('Eres mayor de edad')
